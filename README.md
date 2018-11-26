@@ -32,6 +32,7 @@ with owner):
 * Kubernetes Engine Admin
 * Security Reviewer
 * Service Account Admin
+* Compute Admin
 * Service Account User
 * Storage Admin
 * Viewer
