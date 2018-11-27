@@ -1,34 +1,28 @@
 name: root
 channels:
+  - defaults
+  - pyviz/label/dev
+  - bokeh/label/dev
+  - intake
   - conda-forge
 dependencies:
-  - jupyterhub
-  - bokeh
+  - jupyterhub==0.9.2
+  - bokeh=0.12.16
   - bqplot
-  - cdo
-  - click
   - cython
   - cytoolz
-  - dask
+  - dask=0.18.2
   - dask-ml
-  - dask-kubernetes
   - datashader
-  - distributed
+  - distributed=1.22.1
   - esmpy
   - fastparquet
-  - fusepy
-  - pyviz/label/dev::holoviews
-  - gcsfs
-  - pyviz/label/dev::geoviews
-  - pyviz/label/dev::hvplot
-  - intake::intake
-  - intake::intake-xarray
+  - gcsfs=0.1.2
   - ipywidgets
   - ipyleaflet
-  - jedi
   - jupyter
-  - jupyterlab=0.35
-  - jupyterlab_launcher
+  - jupyterlab=0.34.2
+  - jupyterlab_launcher=0.13.1
   - jupyter_client
   - holoviews
   - libsodium
@@ -36,31 +30,33 @@ dependencies:
   - matplotlib
   - msgpack-python
   - nb_conda_kernels
-  - nbserverproxy
-  - netcdf4
+  - netcdf4>1.4
   - nomkl
   - numba
   - numcodecs
-  - numpy
-  - pandas
-  - pyviz/label/dev::panel
-  - pygam
+  - numpy=1.15.1
+  - pandas=0.23.2
   - python-blosc
-  - python-graphviz
-  - pynio
   - pyzmq
-  - rasterio
   - s3fs
   - scipy
   - scikit-image
   - scikit-learn
-  - toolz
-  - tqdm
-  - tornado
-  - umap-learn
-  - utide
-  - xarray
-  - xesmf
-  - xgcm
-  - zarr
+  - toolz=0.9.0
+  - tornado=5.0.2
+  - xarray=0.10.8
+  - zarr=2.2.0
   - zict
+  - intake-xarray
+  - graphviz
+  - python-graphviz
+  - gsw
+  - pip:
+    - fusepy
+    - click
+    - jedi
+    - kubernetes==6.0.0
+    - dask-kubernetes==0.5.0
+    - xesmf
+    - nbserverproxy==0.8.1
+    - git+https://github.com/xgcm/xgcm
