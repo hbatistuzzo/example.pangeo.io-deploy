@@ -27,7 +27,7 @@ dependencies:
   - ipyleaflet
   - jedi
   - jupyter
-  - jupyterlab
+  - jupyterlab=0.35
   - jupyterlab_launcher
   - jupyter_client
   - holoviews
