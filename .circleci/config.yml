@@ -84,7 +84,8 @@ jobs:
           command: |
             hubploy-helm-deploy ${DEPLOYMENT} pangeo/pangeo ${CIRCLE_BRANCH} \
               --namespace ${CIRCLE_BRANCH} \
-              --set jupyterhub.singleuser.image.name=${IMAGE_NAME}
+              --set jupyterhub.singleuser.image.name=${IMAGE_NAME} \
+              --version v0.1.1-69b4a02
 
 workflows:
   version: 2
@@ -95,6 +96,5 @@ workflows:
         filters:
           branches:
             only:
-            - develop
             - staging
             - prod
