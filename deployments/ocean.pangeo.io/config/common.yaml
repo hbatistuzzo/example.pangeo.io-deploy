@@ -8,3 +8,41 @@ jupyterhub:
     memory:
       limit: 14G
       guarantee: 4G
+  hub:
+    extraConfig:
+      profile_list:
+        c.KubeSpawner.profile_list = [
+          {
+              'display_name': 'Training Env - Python',
+              'kubespawner_override': {
+                  'singleuser_image_spec': 'training/python:label',
+                  'cpu_limit': 1,
+              }
+          },
+          {   
+              'display_name': 'Training Env - Datascience',
+              'kubespawner_override': {
+                  'singleuser_image_spec': 'training/datascience:label',
+                  'cpu_limit': 4,
+              }
+          }, {
+              'display_name': 'DataScience - Small instance',
+              'kubespawner_override': {
+                  'singleuser_image_spec': 'datascience/small:label',
+                  'cpu_limit': 10,
+              }
+          }, {
+              'display_name': 'DataScience - Medium instance',
+              'kubespawner_override': {
+                  'singleuser_image_spec': 'datascience/medium:label',
+                  'cpu_limit': 48,
+              }
+          }, {
+              'display_name': 'DataScience - Medium instance (GPUx2)',
+              'kubespawner_override': {
+                  'singleuser_image_spec': 'datascience/medium:label',
+                  'cpu_limit': 48,
+                  'extra_resource_guarantees': {"nvidia.com/gpu": "2"},
+              }
+          }
+        ]
