@@ -10,7 +10,7 @@ jupyterhub:
       guarantee: 4G
   hub:
     extraConfig:
-      profile_list:
+      profile_list: |
         c.KubeSpawner.profile_list = [
           {
               'display_name': 'Training Env - Python',
