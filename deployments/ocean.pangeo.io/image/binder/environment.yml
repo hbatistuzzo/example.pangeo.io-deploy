@@ -5,6 +5,7 @@ dependencies:
   - jupyterhub
   - bokeh
   - bqplot
+  - cartopy
   - cdo
   - click
   - cython
@@ -33,7 +34,6 @@ dependencies:
   - holoviews
   - libsodium
   - lz4
-  - cartopy
   - msgpack-python
   - nb_conda_kernels
   - nbserverproxy
@@ -45,6 +45,7 @@ dependencies:
   - pandas
   - pyviz/label/dev::panel
   - pygam
+  - pyresample
   - python-blosc
   - python-graphviz
   - pynio
