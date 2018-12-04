@@ -33,7 +33,7 @@ dependencies:
   - holoviews
   - libsodium
   - lz4
-  - matplotlib
+  - cartopy
   - msgpack-python
   - nb_conda_kernels
   - nbserverproxy
