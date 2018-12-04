@@ -8,3 +8,12 @@ jupyterhub:
     memory:
       limit: 14G
       guarantee: 4G
+  auth:
+    github:
+      org_whitelist:
+        - pangeo-ocean
+    admin:
+      access: true
+      users:
+        - raphaeldussin
+        - rabernat
