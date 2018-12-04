@@ -43,7 +43,7 @@ class LLCMapper:
         vmin = plt_kwargs.pop('vmin', field.min())
 
         m = plt.axes(projection=projection)
-        x,y = m(self.new_grid_lon, self.new_grid_lat)
+        x,y = self.new_grid_lon, self.new_grid_lat
 
         # Find index where data is splitted for mapping
         split_lon_idx = round(x.shape[1]/(360/(lon_0 if lon_0>0 else lon_0+360)))
