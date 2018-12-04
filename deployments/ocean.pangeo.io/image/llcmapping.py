@@ -54,11 +54,11 @@ class LLCMapper:
         #m.drawparallels(np.arange(-90,90,30))
 
         p = m.pcolormesh(x[:,:split_lon_idx], y[:,:split_lon_idx], field[:,:split_lon_idx],
-                         vmax=vmax, vmin=vmin, transform=_cart.crs.PlateCarree(), zorder=1, **plt_kwargs)
+                         vmax=vmax, vmin=vmin, transform=cart.crs.PlateCarree(), zorder=1, **plt_kwargs)
         p = m.pcolormesh(x[:,split_lon_idx:], y[:,split_lon_idx:], field[:,split_lon_idx:],
-                         vmax=vmax, vmin=vmin, transform=_cart.crs.PlateCarree(), zorder=2, **plt_kwargs)
+                         vmax=vmax, vmin=vmin, transform=cart.crs.PlateCarree(), zorder=2, **plt_kwargs)
 
-        m.add_feature(_cart.feature.LAND, facecolor='0.5', zorder=3)
+        m.add_feature(cart.feature.LAND, facecolor='0.5', zorder=3)
         label = ''
         if da.name is not None:
             label = da.name
