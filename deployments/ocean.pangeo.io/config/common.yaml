@@ -13,36 +13,31 @@ jupyterhub:
       profile_list: |
         c.KubeSpawner.profile_list = [
           {
-              'display_name': 'Training Env - Python',
+              'display_name': 'small (n1-highmem-2 | 2 cores, 12GB)',
               'kubespawner_override': {
-                  'singleuser_image_spec': 'training/python:label',
-                  'cpu_limit': 1,
+                  'cpu_limit': 2,
+                  'mem_limit': '12GB',
               }
           },
-          {   
-              'display_name': 'Training Env - Datascience',
+          {
+              'display_name': 'standard (n1-highmem-4 | 4 cores, 24GB)',
               'kubespawner_override': {
-                  'singleuser_image_spec': 'training/datascience:label',
                   'cpu_limit': 4,
+                  'mem_limit': '24GB',
               }
-          }, {
-              'display_name': 'DataScience - Small instance',
+          },
+          {
+              'display_name': 'large (n1-highmem-8 | 8 cores, 50GB)',
               'kubespawner_override': {
-                  'singleuser_image_spec': 'datascience/small:label',
-                  'cpu_limit': 10,
+                  'cpu_limit': 8,
+                  'mem_limit': '50GB',
               }
-          }, {
-              'display_name': 'DataScience - Medium instance',
+          },
+          {
+              'display_name': 'x-large (n1-highmem-16 | 16 cores, 102GB RAM)',
               'kubespawner_override': {
-                  'singleuser_image_spec': 'datascience/medium:label',
-                  'cpu_limit': 48,
-              }
-          }, {
-              'display_name': 'DataScience - Medium instance (GPUx2)',
-              'kubespawner_override': {
-                  'singleuser_image_spec': 'datascience/medium:label',
-                  'cpu_limit': 48,
-                  'extra_resource_guarantees': {"nvidia.com/gpu": "2"},
+                  'cpu_limit': 16,
+                  'mem_limit': '102GB',
               }
           }
         ]
