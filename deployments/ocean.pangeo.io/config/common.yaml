@@ -46,3 +46,12 @@ jupyterhub:
               }
           }
         ]
+  auth:
+    github:
+      org_whitelist:
+        - pangeo-ocean
+    admin:
+      access: true
+      users:
+        - raphaeldussin
+        - rabernat
