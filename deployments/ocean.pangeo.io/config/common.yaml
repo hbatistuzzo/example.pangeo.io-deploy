@@ -9,9 +9,12 @@ jupyterhub:
       limit: 14G
       guarantee: 4G
   auth:
+    type: github
     github:
       org_whitelist:
-        - pangeo-ocean
+        - "pangeo-ocean"
+    scopes:
+      - "read:user"
     admin:
       access: true
       users:
