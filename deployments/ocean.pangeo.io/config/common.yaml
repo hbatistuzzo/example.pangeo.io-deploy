@@ -8,6 +8,39 @@ jupyterhub:
     memory:
       limit: 14G
       guarantee: 4G
+  hub:
+    extraConfig:
+      profile_list: |
+        c.KubeSpawner.profile_list = [
+          {
+              'display_name': 'small (n1-highmem-2 | 2 cores, 12GB)',
+              'kubespawner_override': {
+                  'cpu_limit': 2,
+                  'mem_limit': '12GB',
+              }
+          },
+          {
+              'display_name': 'standard (n1-highmem-4 | 4 cores, 24GB)',
+              'kubespawner_override': {
+                  'cpu_limit': 4,
+                  'mem_limit': '24GB',
+              }
+          },
+          {
+              'display_name': 'large (n1-highmem-8 | 8 cores, 50GB)',
+              'kubespawner_override': {
+                  'cpu_limit': 8,
+                  'mem_limit': '50GB',
+              }
+          },
+          {
+              'display_name': 'x-large (n1-highmem-16 | 16 cores, 102GB RAM)',
+              'kubespawner_override': {
+                  'cpu_limit': 16,
+                  'mem_limit': '102GB',
+              }
+          }
+        ]
   auth:
     type: github
     github:
