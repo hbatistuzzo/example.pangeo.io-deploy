@@ -31,7 +31,6 @@ dependencies:
   - jupyterlab=0.35
   - jupyterlab_launcher
   - jupyter_client
-  - holoviews
   - libsodium
   - lz4
   - msgpack-python
@@ -65,4 +64,7 @@ dependencies:
   - zarr
   - zict
   - pip:
-    - git+https://github.com/xgcm/xgcm
+    - git+https://github.com/pydata/xarray.git
+    - git+https://github.com/zarr-developers/zarr.git
+    - git+https://github.com/xgcm/xgcm.git
+    - git+https://github.com/ContinuumIO/intake.git
