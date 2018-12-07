@@ -45,7 +45,7 @@ jupyterhub:
     type: github
     github:
       org_whitelist:
-        - "pangeo-ocean"
+        - pangeo-data
     scopes:
       - "read:user"
     admin:
