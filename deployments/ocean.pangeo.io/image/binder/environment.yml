@@ -20,6 +20,7 @@ dependencies:
   - fusepy
   - pyviz/label/dev::holoviews
   - gcsfs
+  - gsw
   - pyviz/label/dev::geoviews
   - pyviz/label/dev::hvplot
   - intake::intake
@@ -54,6 +55,7 @@ dependencies:
   - scipy
   - scikit-image
   - scikit-learn
+  - siphon
   - toolz
   - tqdm
   - tornado
