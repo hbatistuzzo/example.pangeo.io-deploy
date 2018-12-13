@@ -82,6 +82,7 @@ jobs:
       - run:
           name: Deploy hub
           command: |
+            echo ${DEPLOYMENT} ${CIRCLE_BRANCH} ${IMAGE_NAME}
             hubploy-helm-deploy ${DEPLOYMENT} pangeo-deploy ${CIRCLE_BRANCH} \
               --namespace ${CIRCLE_BRANCH} \
               --set jupyterhub.singleuser.image.name=${IMAGE_NAME}
