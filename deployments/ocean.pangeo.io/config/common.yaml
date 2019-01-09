@@ -48,8 +48,8 @@ jupyterhub:
     github:
       whitelist:
         users:
-          - rabernat
-          - raphaeldussin
+          - "rabernat"
+          - "raphaeldussin"
 #      org_whitelist:
 #        - "pangeo-data"
     scopes:
