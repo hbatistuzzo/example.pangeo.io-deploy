@@ -46,8 +46,12 @@ jupyterhub:
   auth:
     type: github
     github:
-      org_whitelist:
-        - "pangeo-data"
+      whitelist:
+        users:
+          - rabernat
+          - raphaeldussin
+#      org_whitelist:
+#        - "pangeo-data"
     scopes:
       - "read:org"
       - "read:user"
