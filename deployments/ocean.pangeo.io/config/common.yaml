@@ -43,20 +43,16 @@ jupyterhub:
               }
           }
         ]
-#  auth:
-#    type: github
-#    github:
-#      whitelist:
-#        users:
-#          - "rabernat"
-#          - "raphaeldussin"
-##      org_whitelist:
-##        - "pangeo-data"
-#    scopes:
-#      - "read:org"
-#      - "read:user"
-#    admin:
-#      access: true
-#      users:
-#        - raphaeldussin
-#        - rabernat
+  auth:
+    type: github
+    github:
+      orgWhitelist:
+        - "pangeo-data"
+    scopes:
+      - "read:org"
+      - "read:user"
+    admin:
+      access: true
+      users:
+        - raphaeldussin
+        - rabernat
