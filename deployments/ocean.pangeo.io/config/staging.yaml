@@ -2,7 +2,7 @@ jupyterhub:
   proxy:
     https:
       hosts:
-      - ocean.pangeo.io
+      - old.ocean.pangeo.io
       letsencrypt:
         contactEmail: raphael.dussin@gmail.com
     service:
